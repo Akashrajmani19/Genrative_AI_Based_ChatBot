@@ -1,0 +1,10 @@
+python==3.10.12
+cuda-toolkit==12.2.2
+torch
+langchain==0.0.225
+ctransformers==0.2.5
+sentence-transformers==2.2.2
+pypdf
+streamlit
+faiss-cpu
+-e .
