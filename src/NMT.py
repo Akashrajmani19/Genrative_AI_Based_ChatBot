@@ -10,6 +10,7 @@ from pathlib import Path
 from dataclasses import dataclass
 from src.logger import logging
 from src.exception import CustomException
+from langchain.memory import ConversationBufferMemory
 
 class NMT:
     def __init__(self):
@@ -36,7 +37,7 @@ class NMT:
 
     def text_generation(self, text, language):
         try:
-            n_gpu_layers = 1  # Metal set to 1 is enough.
+            n_gpu_layers = 32  # Metal set to 1 is enough.
             n_batch = 216
 
             llm = LlamaCpp(
